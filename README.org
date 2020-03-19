@@ -5,7 +5,11 @@
 Custom stumpwm init. Should work out of the box without any configuration other
 than adding
 #+begin_src lisp
-(stumpwm:load-module :stumpwm-init)
+in-package :stumpwm)
+  
+(add-to-load-path "~/.stumpwm.d/modules/stumpwm-init/")
+
+(load-module "stumpwm-init")
 #+end_src
 to your ~.stumpwmrc~ (although there is some [[*Optional Configuration][optional configuration]]!).
 
@@ -17,41 +21,3 @@ to your ~.stumpwmrc~ (although there is some [[*Optional Configuration][optional
   - Call xterm with the =Hack= font.
   - Use a package to keep the namespace clean, export symbols for [[*Optional Configuration][optional
     configuration]].
-* Optional Configuration
-** xterm
-Install the =Hack= font, or add your own to =stumpwm-init:*xterm-font*=.
-#+begin_src common-lisp
-(setf stumpwm-init:*xterm-font* "Hack"
-      stumpwm-init:*xterm-font-pt* 12)
-#+end_src
-** deftermcom
-Write commands which will be run and opened in the terminal. Useful for curses
-programs.
-#+begin_src common-lisp
-(stumpwm-init:deftermcom nmtui "-e nmtui" xterm)
-#+end_src
-** poison
-Find your mouse's name with ~xinput --list~, and set it to
-~stumpwm-init:*my-mouse*~. Turns the mouse all the way off using ~xinput~.
-** app-menu
-Add programs to the app menu (bound to =M-`= by default) using ~pushnew-apps~.
-This keeps them sorted alphabetically. Any programs in ~stumpwm-init:*app-menu*~
-need to be installed to work:
-- emacs
-- web browser
-Example:
-#+begin_src common-lisp
-(stumpwm-init:pushnew-apps '("eclipse" "eclipse")
-                           '("spotify" "spotify")
-                           '("gimp" "gimp")
-                           '("office" "openoffice")
-                           '("pass"
-                             ("copy" pass:pass-copy-menu)
-                             ("generate" pass:pass-generate))
-                           '("PDF" "okular")
-                           '("sound" "pavucontrol"))
-#+end_src
-* Keybindings
-  Most can be found under the prefix (bound to =C-i=), but =M-`= (no prefix) is the app-menu.
-* Contributing
-Pull request onto the develop branch (not master). Also: =grep -RF -- TODO=.

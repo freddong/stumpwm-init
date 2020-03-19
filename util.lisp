@@ -1,9 +1,6 @@
 (in-package #:stumpwm-init)
-(defmacro deftermcom (name
-                      &optional argstr (termcom 'xterm))
-  "Call a terminal with arguments."
-  (once-only (argstr)
-    `(defcommand ,name () ()
-       (if ,argstr
-           (,termcom ,argstr)
-           (,termcom)))))
+
+;;(defun get-volume ()
+;;  (string-trim
+;;   (string #\newline)
+;;   (run-shell-command "amixer sget Master | grep 'Right:' | awk -F'[][]' '{ print $2, $4 }' &" t)))

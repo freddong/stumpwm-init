@@ -9,24 +9,20 @@
   :depends-on (;; quicklisp
                :alexandria
                :cffi
+	       :swank
                :stumpwm
-               :usocket-server
-	             ;; :slynk
                :percent-encoding
 
                ;; stumpwm-contrib
                :shell-command-history
                :command-history
-               :battery-portable
                :browse
-               :pinentry
-               :pass
-               :clipboard-history
-               :app-menu)
+               :pass)
   :components ((:file "package")
                (:file "init")
                (:file "util")
                (:file "config")
                (:file "commands")
                (:file "keybindings")
+               (:file "dev")
                (:file "finalize")))
