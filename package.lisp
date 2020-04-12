@@ -24,4 +24,5 @@
    :*top-map*
    :*window-format*)
   (:export
+   next-window-same-class
    ))

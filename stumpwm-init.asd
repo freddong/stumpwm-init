@@ -12,7 +12,7 @@
 	       :swank
                :stumpwm
                :percent-encoding
-
+	       :stumptray
                ;; stumpwm-contrib
                :shell-command-history
                :command-history

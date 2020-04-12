@@ -7,4 +7,4 @@
 				 :style swank:*communication-style*
 				 :dont-close t)
 	    (stumpwm:echo-string (current-screen)
-			 "Starting swank. M-x slime-connect RET RET, then (in-package stumpwm)."))
+			 "Starting swank. M-x slime-connect RET RET (port 4004), then (in-package stumpwm)."))

@@ -18,16 +18,17 @@
   (0 nil t :class "shadowsocks-qt5")
   )
 
-(setf *mode-line-timeout* 1)
+(setf *mode-line-timeout* 10)
 (setf *mode-line-foreground-color* "#98BDFB")
-(setf *mode-line-border-color* "#028090")
+(setf *mode-line-border-color* "#000000")
 (setf *mode-line-background-color* "#191919")
 (setf *mode-line-foreground-color* "#98BDFB")
 
+(setf *time-modeline-string* "%a %b %e %k:%M")
 (setf *screen-mode-line-format*
       (list "[^B%n^b] %W^>"
             ;;"   Vol:"   '(:eval (get-volume))
-	    "| %d"))
+	    "| %d |          "))
 (setf *window-format* "%m%n%s%c")
 
 ;; Since this is bound to a key by default in this configuration, it is nice to
@@ -43,7 +44,7 @@
     ("konsole" . 0)
     ("Firefox" . 1)
     ("Emacs" . 2)
-    ;; ("XLogo" . 9) ; for testing
+    ("Slack" . 3)
     )
   "Alist of window classes to be renumbered, and their target numbers.")
 
