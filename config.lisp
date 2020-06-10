@@ -15,7 +15,6 @@
 ;;
 (stumpwm:gnewbg "utils")
 (stumpwm:define-frame-preference "utils"
-  (0 nil t :class "shadowsocks-qt5")
   )
 
 (setf *mode-line-timeout* 10)
@@ -23,6 +22,10 @@
 (setf *mode-line-border-color* "#000000")
 (setf *mode-line-background-color* "#191919")
 (setf *mode-line-foreground-color* "#98BDFB")
+
+;;(stumpwm:set-focus-color "#98BDFB")
+;;(stumpwm:set-unfocus-color "#000000")
+;;(setf stumpwm:*normal-border-width* 4)
 
 (setf *time-modeline-string* "%a %b %e %k:%M")
 (setf *screen-mode-line-format*
@@ -75,3 +78,4 @@
 	))))
 
 (stumpwm:add-hook stumpwm:*new-window-hook* 'renumber-window-by-class)
+

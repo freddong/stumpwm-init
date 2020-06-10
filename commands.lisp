@@ -4,7 +4,7 @@
 	    (stumpwm:run-or-raise "konsole" '(:class "konsole") ))
 
 (defcommand firefox () ()
-  (stumpwm:run-or-raise "firefox"'(:class "Firefox")))
+  (stumpwm:run-or-raise "/opt/firefox/firefox"'(:class "Firefox")))
 (defcommand pycharm () ()
   (stumpwm:run-or-raise "gtk-launch jetbrains-pycharm-ce"'(:class "jetbrains-pycharm-ce")))
 (defcommand idea () ()
