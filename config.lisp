@@ -27,11 +27,13 @@
 ;;(stumpwm:set-unfocus-color "#000000")
 ;;(setf stumpwm:*normal-border-width* 4)
 
+;(setf battery-portable:*prefer-sysfs* nil)
+
 (setf *time-modeline-string* "%a %b %e %k:%M")
 (setf *screen-mode-line-format*
       (list "[^B%n^b] %W^>"
             ;;"   Vol:"   '(:eval (get-volume))
-	    "| %d |          "))
+	    "| %d %B |          "))
 (setf *window-format* "%m%n%s%c")
 
 ;; Since this is bound to a key by default in this configuration, it is nice to

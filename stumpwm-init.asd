@@ -12,6 +12,7 @@
 	       :swank
                :stumpwm
                :percent-encoding
+	       :battery-portable
 	       :stumptray
                ;; stumpwm-contrib
                :shell-command-history

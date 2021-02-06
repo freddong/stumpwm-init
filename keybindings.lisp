@@ -43,6 +43,9 @@
 (define-key *top-map* (kbd "XF86AudioLowerVolume") "exec amixer set Master 5%-")
 (define-key *top-map* (kbd "XF86AudioRaiseVolume") "exec amixer set Master 5%+")
 
+(define-key *top-map* (kbd "XF86MonBrightnessUp") "exec xrandr --output eDP --brightness 0.8")
+(define-key *top-map* (kbd "XF86MonBrightnessDown") "exec xrandr --output eDP --brightness 0.5")
+
 ;; Mute
 (define-key *top-map* (kbd "XF86AudioMute") "exec amixer set Master toggle")
 
